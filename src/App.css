@@ -417,6 +417,7 @@ div.marquee>a>img {
     width: 150px;
     height: 1100px;
     display: flex;
+    gap: 10px;
     flex-direction: column;
   }
   .leet{
