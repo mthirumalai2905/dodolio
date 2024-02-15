@@ -531,8 +531,8 @@ div.marquee>a>img {
     padding: 8px 16px;
   }
   .popup-content{
-    margin-left: -420px;
-    margin-top: -500px;
+    margin-left: -430px;
+    margin-top: -700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
