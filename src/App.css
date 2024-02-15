@@ -518,7 +518,7 @@ div.marquee>a>img {
   cursor: pointer;
 }
 /* Responsive media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 628px) {
   .popup-content h2 {
     font-size: 20px;
   }
@@ -529,5 +529,9 @@ div.marquee>a>img {
 
   .popup-content button {
     padding: 8px 16px;
+  }
+  .popup-content{
+    width: 100%;
+    height: 100px;
   }
 }
