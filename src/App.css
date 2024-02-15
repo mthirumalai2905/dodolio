@@ -389,13 +389,13 @@ div.marquee>a>img {
     text-align: center; /* Center paragraph content */
   }
   .projects{
-    margin-top: -15px;
+    margin-top: -20px;
   }
   .socials {
     flex-direction: row; /* Align social icons horizontally */
     gap: 20px; /* Add gap between social icons */
     padding: 10px 0; /* Adjust padding for social icons */
-    margin-top: -45px; /* Remove margin for social icons */
+    margin-top: -40px; /* Remove margin for social icons */
   }
 
   #span {
