@@ -517,3 +517,17 @@ div.marquee>a>img {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Responsive media queries */
+@media screen and (max-width: 768px) {
+  .popup-content h2 {
+    font-size: 20px;
+  }
+  
+  .popup-content p {
+    font-size: 14px;
+  }
+
+  .popup-content button {
+    padding: 8px 16px;
+  }
+}
