@@ -481,3 +481,39 @@ div.marquee>a>img {
   font-size: 50px;
   font-family: "Protest Strike", sans-serif;
 }
+.full-screen-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  text-align: center;
+  color: white;
+}
+
+.popup-content h2 {
+  font-size: 28px;
+  font-family: sans-serif;
+  color: #f7f7f7;
+}
+
+.popup-content p {
+  font-size: 16px;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
