@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Fredoka", sans-serif;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.avatar img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-top: -150px;
+}
+.intro{
+  width: 950px;
+  height: 250px;
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 50px;
+  font-family: "Protest Strike", sans-serif;
+}
+.actual-intro p{
+  padding-left: 40px;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+.actual-right{
+  width: 1250px;
+  height: 225px;
+  
+}
+.actual-right img{
+  object-fit: cover;
+  border-top-right-radius: 7px; /* Radius for top-right corner */
+  border-bottom-right-radius: 7px; /* Radius for bottom-right corner */
+}
+.actual-intro{
+  display: flex;
+  flex-direction: column;
+}
+.socials{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.actual-intro .socials{
+  padding-left: 42px;
+  padding-top: 27px;
+  margin-right: 10px;
+}
+span{
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: blue;
+}
