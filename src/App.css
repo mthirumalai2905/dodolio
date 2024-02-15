@@ -388,12 +388,14 @@ div.marquee>a>img {
     padding: 10px; /* Reduce padding for paragraph content */
     text-align: center; /* Center paragraph content */
   }
-
+  .projects{
+    margin-top: -15px;
+  }
   .socials {
     flex-direction: row; /* Align social icons horizontally */
     gap: 20px; /* Add gap between social icons */
     padding: 10px 0; /* Adjust padding for social icons */
-    margin-top: -20px; /* Remove margin for social icons */
+    margin-top: -40px; /* Remove margin for social icons */
   }
 
   #span {
