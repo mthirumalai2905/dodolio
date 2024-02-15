@@ -407,6 +407,7 @@ div.marquee>a>img {
     height: 3345px;
     display: flex;
     flex-direction: column;
+    margin-right: 5px;
   }
 }
 
@@ -419,18 +420,18 @@ div.marquee>a>img {
     flex-direction: column;
   }
   .leet{
-    width: 400px;
+    width: 380px;
   }
   .leet img{
-    width: 400px;
+    width: 380px;
     object-fit: fill;
   }
   .git{
-    width: 400px;
+    width: 380px;
     height: 400px;
   }
   .git img{
-    width: 400px;
+    width: 380px;
     object-fit: fill;
   }
   .foot{
