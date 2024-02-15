@@ -12,6 +12,8 @@ import videop from '../videos/poke.webm'
 
 const project = () => {
   return (
+    <div className='updated-project'>
+    <h2>My Work</h2>
     <div className='wrapper-class'>
     <div className='wrapper-container'>
     <div className='project'>
@@ -40,6 +42,7 @@ const project = () => {
     </div>
     <div className='project-poke'>
     <video  src={videop} autoPlay muted loop playsInline controls={false}></video>
+    </div>
     </div>
     </div>
     </div>

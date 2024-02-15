@@ -3,6 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../App.css';
 import avatar from '../images/avatar.png';
+
+const SocialIcon = ({ icon, url }) => {
+  const redirectToSocialMedia = () => {
+    window.location.href = url;
+  };
+
+  return (
+    <FontAwesomeIcon icon={icon} onClick={redirectToSocialMedia} style={{ color: 'black', cursor: 'pointer' }} />
+  );
+};
+
 const Home = () => {
   return (
     <div className='app'>
@@ -12,14 +23,13 @@ const Home = () => {
         <h1>Hey I'm Thiru</h1>
         <div className='intro'>
           <div className='actual-intro'>
-            <p>"Dive into the world of web development excellence with a seasoned freelancer, crafting digital wonders across global platforms like Fiverr, Instagram, and a plethora of open-source ventures. Ready to amplify your projects? Let's connect! Reach out via email at <span>mthirumalai2905@gmail.com</span> <br />or find me on LinkedIn: mthirumalai2905."</p>
-          <div className='projects'><p>20+ projects expertly completed, demonstrating my proficiency and commitment.</p></div>
-          <div className='socials'>
-              {/* FontAwesome social media icons */}
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faLinkedin} />
-              <FontAwesomeIcon icon={faInstagram} />
-              <FontAwesomeIcon icon={faGithub} />
+            <p>"Dive into the world of web development excellence with a seasoned freelancer, crafting digital wonders across global platforms like Fiverr, Instagram, and a plethora of open-source ventures. Ready to amplify your projects? Let's connect! Reach out via email at  <a href="mailto:mthirumalai2905@gmail.com" id='span'>mthirumalai2905@gmail.com</a> <br />or find me on LinkedIn: mthirumalai2905."</p>
+            <div className='projects'><p>20+ projects expertly completed, demonstrating my proficiency and commitment.</p></div>
+            <div className='socials'>
+              <SocialIcon icon={faTwitter} url="https://twitter.com/Thiruma17715545" />
+              <SocialIcon icon={faLinkedin} url="https://www.linkedin.com/in/mthirumalai2905" />
+              <SocialIcon icon={faInstagram} url="https://instagram.com/tthirruu" />
+              <SocialIcon icon={faGithub} url="https://github.com/mthirumalai2905" />
               {/* Add more social media icons as needed */}
             </div>
           </div>
@@ -30,4 +40,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
