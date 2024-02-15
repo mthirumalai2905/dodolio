@@ -531,6 +531,8 @@ div.marquee>a>img {
     padding: 8px 16px;
   }
   .popup-content{
+    margin-left: -55px;
+    margin-top: -500px;
     width: 100%;
     height: 100px;
   }
