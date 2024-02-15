@@ -395,7 +395,7 @@ div.marquee>a>img {
     flex-direction: row; /* Align social icons horizontally */
     gap: 20px; /* Add gap between social icons */
     padding: 10px 0; /* Adjust padding for social icons */
-    margin-top: -40px; /* Remove margin for social icons */
+    margin-top: -45px; /* Remove margin for social icons */
   }
 
   #span {
