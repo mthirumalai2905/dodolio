@@ -361,9 +361,7 @@ div.marquee>a>img {
 
 /* Add media query for smaller screens */
 @media screen and (max-width: 768px) {
-  *{
-    overflow-x: hidden;
-  }
+  
   .navbar img {
     height: 150px; /* Allow image height to adjust based on its content */
     max-width: 100%; /* Ensure image fits within the container */
