@@ -538,3 +538,108 @@ div.marquee>a>img {
 .button-container{
   margin-bottom: 45px;
 }
+@media screen and (max-width: 768px) {
+  .wrapper-container {
+    height: 800px; /* Adjust height for smaller screens */
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper-container {
+    height: 600px; /* Further adjust height for very small screens */
+    grid-template-columns: 1fr; /* Change to 1 column */
+  }
+}
+@media screen and (max-width: 628px) {
+  .wrapper-container {
+    width: 100%; /* Use full width for mobile */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .project {
+    height: auto; /* Allow project height to adjust based on content */
+  }
+
+  .project video {
+    width: 100%; /* Fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a max height to keep it manageable on mobile */
+    object-fit: cover; /* Ensure the video covers the container */
+  }
+}
+.updated-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px; /* Adjust margin as needed */
+}
+
+.updated-big h2 {
+  font-size: 50px; /* Font size for larger screens */
+  font-family: "Protest Strike", sans-serif;
+  margin-bottom: 20px; /* Space between title and container */
+}
+
+.big {
+  width: 300px; /* Set a fixed width for the square container */
+  height: 300px; /* Set a fixed height for the square container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc; /* Optional border for the square */
+  border-radius: 15px; /* Optional rounded corners */
+  overflow: hidden; /* Prevent overflow of images */
+}
+
+.leet-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+  grid-template-rows: repeat(2, 1fr); /* Two rows for the grid */
+  gap: 10px; /* Decrease gap between columns */
+  height: 100%; /* Fill the height of the square */
+  width: 100%; /* Fill the width of the square */
+}
+
+.leet, .git, .codechef, .codeforces, .geeksforgeeks, .atcoders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width for each item */
+  height: 100%; /* Full height for each item */
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Prevent overflow of images */
+  margin: 5px; /* Increase gap between images */
+}
+
+.leet img, .git img, .codechef img, .codeforces img, .geeksforgeeks img, .atcoders img {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Allow images to use full height without compression */
+  object-fit: contain; /* Use contain to avoid distortion */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 628px) {
+  .big {
+    width: 100%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .leet-container {
+    display: flex; /* Change to flex for vertical stacking */
+    flex-direction: column; /* Stack items in a column */
+  }
+
+  .leet, .git, .codechef, .codeforces, .geeksforgeeks, .atcoders {
+    width: 100%; /* Full width for each item */
+    height: auto; /* Allow height to adjust */
+    margin: 5px; /* Maintain gap between images */
+  }
+
+  .leet img, .git img, .codechef img, .codeforces img, .geeksforgeeks img, .atcoders img {
+    height: auto; /* Maintain natural height for images */
+    max-height: 200px; /* Set a maximum height for images in mobile view */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+}
