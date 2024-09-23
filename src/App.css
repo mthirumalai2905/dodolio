@@ -241,22 +241,30 @@ div.marquee>a>img {
   grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
   grid-gap: 20px; /* Adjust the gap between grid items as needed */
   padding: 15px;
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 10px; /* Add radius for the outer container */
 }
-
 
 .project {
-  /* Define styles for each project item */
-  width: 100%; /* Adjust the width of each project item as needed */
-  height: 350px; /* Adjust the height of each project item as needed */
-  background-color: #f0f0f0; /* Example background color */
-  border-radius: 10px;
+  background-color: #f0f0f0; /* Background color for the video container */
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Prevent overflow of video */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
-.project video{
+
+.project video {
   width: 100%;
-  height: 350px;
-  border-radius: 10px;
-  object-fit: cover;
+  height: 100%;
+  border-radius: 15px; /* Make videos match the container radius */
+  object-fit: cover; /* Ensure the video covers the container */
 }
+
+/* Scale effect on hover */
+.project:hover {
+  transform: scale(1.05); /* Scale up the container */
+}
+
 .project-marker video{
   width: 100%;
   height: 350px;
@@ -276,6 +284,18 @@ div.marquee>a>img {
   object-fit: cover;
 }
 .project-you video{
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.project-kanban video{
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.project-typify video{
   width: 100%;
   height: 350px;
   border-radius: 10px;
@@ -305,52 +325,39 @@ div.marquee>a>img {
   border-radius: 10px;
   object-fit: cover;
 }
-.leet, .git{
-  width: 700px;
-  height: 400px;
-  border: 1px solid rgb(122, 122, 122);
-  border-radius: 7px;
-  padding: 5px; 
-}
-.big{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 70px;
-}
-.leet img{
-  width: 700px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.leet-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.git img{
-  width: 700px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+/* Container for the grid */
+/* Container for the grid */
 .leet-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-gap: 20px; /* Gap between grid items */
+  justify-items: center; /* Center the items horizontally */
+  align-items: center;   /* Center the items vertically */
+  margin: 20px; /* Add margin to the container */
 }
 
-.leet img,
-.git img {
-  transition: transform 0.3s ease-in-out;
+/* Box for each image with rounded corners */
+.leet, .git, .codechef, .codeforces, .geeksforgeeks, .atcoders {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Prevent overflow of image */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
-.leet:hover img,
-.git:hover img {
-  transform: scale(1.1); /* Adjust the scale factor as needed */
+/* Ensure images are responsive and fill their respective containers */
+.leet img, .git img, .codechef img, .codeforces img, .geeksforgeeks img, .atcoders img {
+  width: 100%;
+  object-fit: cover; /* Use cover to maintain aspect ratio */
 }
+
+/* Scale effect on hover */
+.leet:hover, .git:hover, .codechef:hover, .codeforces:hover, .geeksforgeeks:hover, .atcoders:hover {
+  transform: scale(1.1); /* Scale up the container */
+}
+
 .foot{
   display: flex;
   flex-direction: row;
@@ -413,74 +420,56 @@ div.marquee>a>img {
     margin-right: 5px;
   }
 }
-
 @media screen and (max-width: 628px) {
-  .leet-container{
+  .leet-container {
     margin-top: -65px;
-    width: 150px;
-    height: 1100px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically */
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+    gap: 10px; /* Space between items */
+    padding: 10px; /* Add padding */
+    justify-items: center; /* Center items horizontally */
+    padding-bottom: 100px; /* Add padding for footer space */
   }
-  .leet{
-    width: 380px;
-    margin-left: 10px;
-    margin-right: 10px;
+
+  .leet, .git, .codechef, .codeforces, .geeksforgeeks, .atcoders {
+    width: 100%; /* Full width for each item */
+    max-width: none; /* Remove max width */
   }
-  .leet img{
-    width: 380px;
-    object-fit: fill;
+
+  .leet img, .git img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover for better image handling */
   }
-  .git{
-    width: 380px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .git img{
-    width: 380px;
-    object-fit: fill;
-  }
-  .foot{
+
+  .foot {
     margin-top: -125px;
   }
-  .updated-big h2{
+
+  .updated-big h2, .updated-project h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: -75px;
+    font-size: 30px; /* Reduced font size */
     font-family: "Protest Strike", sans-serif;
-    font-size: 50px;
-  }
-  .updated-project h2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin-top: 75px;
-    font-family: "Protest Strike", sans-serif;
+    padding: 20px; /* Add padding for spacing */
+    margin: 0; /* Reset margin */
   }
 }
-.updated-big h2{
+
+.updated-big h2, .updated-project h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 50px; /* Keep for larger screens */
+  font-family: "Protest Strike", sans-serif;
   padding-bottom: 55px;
-  font-size: 50px;
-  font-family: "Protest Strike", sans-serif;
 }
-.updated-project h2{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 75px;
-  font-size: 50px;
-  font-family: "Protest Strike", sans-serif;
-}
+
 .full-screen-popup {
   position: fixed;
   top: 0;
@@ -499,45 +488,50 @@ div.marquee>a>img {
 }
 
 .popup-content h2 {
-  font-size: 28px;
+  font-size: 28px; /* Keep for larger screens */
   font-family: sans-serif;
   color: #f7f7f7;
 }
 
 .popup-content p {
-  display :none;
+  display: none; /* Keep hidden */
 }
 
 .popup-content button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Adjust padding */
   background-color: #ffffff;
   color: #333333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
+
 /* Responsive media queries */
 @media screen and (max-width: 628px) {
   .popup-content h2 {
-    font-size: 20px;
+    font-size: 20px; /* Reduced size */
   }
-  
+
   .popup-content p {
-    font-size: 3px;
+    font-size: 3px; /* Keep hidden */
   }
 
   .popup-content button {
-    padding: 8px 16px;
+    padding: 8px 16px; /* Adjust button size */
   }
-  .popup-content{
-    margin-left: -430px;
-    margin-top: -700px;
+
+  .popup-content {
+    margin: 0; /* Reset margins */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100px;
+    width: 90%; /* Use 90% width */
+    height: auto; /* Adjust height */
+    padding: 20px; /* Add padding */
   }
+}
+.button-container{
+  margin-bottom: 45px;
 }

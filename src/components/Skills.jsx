@@ -59,8 +59,11 @@ const Skills = () => {
       </section>
       <div className='button-container'>
       <button className="button-56" onClick={() => window.location.href = Resume}>View Resume</button>
-      <button className='button-56'>7 Internships</button>
-      </div>
+      <a href="https://bio-xi-three.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+      <button className='button-56'>Links</button>
+    </a>
+    
+          </div>
     </div>
   );
 }
