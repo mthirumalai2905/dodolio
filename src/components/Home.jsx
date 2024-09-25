@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../App.css';
 import avatar from '../images/avatar.png';
+import { faBurn } from '@fortawesome/free-solid-svg-icons';
 
 const SocialIcon = ({ icon, url }) => {
   const redirectToSocialMedia = () => {
@@ -26,9 +27,9 @@ const Home = () => {
             <p>"Dive into the world of web development excellence with a seasoned freelancer, crafting digital wonders across global platforms like Fiverr, Instagram, and a plethora of open-source ventures. Ready to amplify your projects? Let's connect! Reach out via email at  <a href="mailto:mthirumalai2905@gmail.com" id='span'>mthirumalai2905@gmail.com</a> <br />or find me on LinkedIn: mthirumalai2905."</p>
             <div className='projects'><p>20+ projects expertly completed, demonstrating my proficiency and commitment.</p></div>
             <div className='socials'>
-              <SocialIcon icon={faTwitter} url="https://twitter.com/Thiruma17715545" />
+              <SocialIcon icon={faTwitter} url="https://twitter.com/piratethiru" />
               <SocialIcon icon={faLinkedin} url="https://www.linkedin.com/in/mthirumalai2905" />
-              <SocialIcon icon={faInstagram} url="https://instagram.com/tthirruu" />
+              <SocialIcon icon={faBurn} url="https://peerlist.io/mthirumalai2905" />
               <SocialIcon icon={faGithub} url="https://github.com/mthirumalai2905" />
               {/* Add more social media icons as needed */}
             </div>

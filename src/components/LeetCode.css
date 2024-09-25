@@ -1,0 +1,42 @@
+.cp-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto);    /* Auto height for rows */
+    gap: 20px;  /* Increased spacing for better visibility */
+  }
+  
+  .cp-profile {
+    display: flex;
+    gap: 150px;
+    flex-direction: row;
+    justify-content: space-between; /* Use space-between for better alignment */
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px; /* Padding for better spacing */
+    border: 1px solid #ccc; /* Border for visibility */
+  }
+  
+  .cp-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Left alignment for text */
+    gap: 8px; /* Spacing between text elements */
+  }
+  
+  .lang {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Optional: You can add additional styles to improve the visual appeal */
+ 
+
+  .cp-image img {
+    width: 80px; /* Set desired width */
+    height: 80px; /* Set desired height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+  }
+  
